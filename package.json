@@ -1,0 +1,27 @@
+{
+  "name": "lockstep",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Real-time collaborative project management for delivery teams",
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "api",
+    "web"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,yellow \"npm run dev -w api\" \"npm run dev -w web\"",
+    "dev:api": "npm run dev -w api",
+    "dev:web": "npm run dev -w web",
+    "build": "npm run build -w web",
+    "db:generate": "npm run db:generate -w api",
+    "db:migrate": "npm run db:migrate -w api",
+    "db:seed": "npm run db:seed -w api",
+    "test": "npm run test -w api",
+    "typecheck": "npm run typecheck -w api"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}

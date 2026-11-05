@@ -1,0 +1,18 @@
+node_modules/
+dist/
+.next/
+*.tsbuildinfo
+next-env.d.ts
+
+# Secrets: only .env.example files are committed
+.env
+.env.local
+.env.*.local
+
+# Design tooling scratch
+.impeccable/mocks/
+.impeccable/review/
+.impeccable/config.local.json
+
+*.log
+.DS_Store

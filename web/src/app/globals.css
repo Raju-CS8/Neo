@@ -1,0 +1,45 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-cover: #f2c230;
+  --color-cover-deep: #d9a913;
+  --color-ink: #15171c;
+  --color-ink-2: #4a4e57;
+  --color-ground: #f5f6f3;
+  --color-line: #d6d8d2;
+  --color-pencil: #2247c8;
+  --color-pencil-wash: #e6ebfb;
+  --color-redpencil: #b92a18;
+  --color-redpencil-wash: #fbe9e6;
+  --font-sans: var(--font-ui);
+  --font-mark: var(--font-engrave);
+}
+
+html { background: var(--color-ground); color: var(--color-ink); font-variant-numeric: tabular-nums; }
+::selection { background: var(--color-cover); color: var(--color-ink); }
+:focus-visible { outline: 2px solid var(--color-pencil); outline-offset: 2px; }
+* { scrollbar-color: #15171c55 transparent; scrollbar-width: thin; }
+a { text-underline-offset: 3px; }
+
+.btn { display: inline-flex; align-items: center; gap: 6px; border-radius: 6px; padding: 8px 14px; font-weight: 700; font-size: 14px; background: var(--color-ink); color: #fff; cursor: pointer; }
+.btn:hover { background: #2c2f37; }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.btn-quiet { background: transparent; color: var(--color-ink); box-shadow: inset 0 0 0 1px var(--color-ink); }
+.btn-quiet:hover { background: #15171c12; }
+.btn-danger { background: var(--color-redpencil); }
+.btn-danger:hover { background: #9c2212; }
+.field { width: 100%; border: 1px solid #15171c66; border-radius: 6px; background: #fff; padding: 8px 10px; font-size: 14px; }
+.field:disabled { background: #eceee9; color: var(--color-ink-2); }
+.label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+.panel { background: #fff; border: 1px solid var(--color-line); border-radius: 6px; }
+
+/* A boxed rehearsal mark: how versions appear everywhere. */
+.mark { font-family: var(--font-mark); font-weight: 700; font-size: 12px; line-height: 16px; border: 1.5px solid currentColor; padding: 0 4px; background: #fff; }
+
+.stave { position: relative; height: 25px; background: repeating-linear-gradient(#15171c33 0 1px, transparent 1px 6px); }
+.stave-bars { position: absolute; inset: 0; background: repeating-linear-gradient(90deg, #15171c55 0 1px, transparent 1px 12.5%); }
+.note { position: absolute; top: 8px; width: 12px; height: 9px; border-radius: 50%; background: var(--color-ink); transform: rotate(-20deg); padding: 0; cursor: pointer; }
+.note-mine { background: var(--color-pencil); }
+.note-new { animation: land 400ms steps(4) 1; }
+@keyframes land { from { box-shadow: 0 0 0 8px #2247c855; } to { box-shadow: 0 0 0 0 #2247c800; } }
+@media (prefers-reduced-motion: reduce) { .note-new { animation: none; } }

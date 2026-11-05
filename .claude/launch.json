@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "lockstep-web", "runtimeExecutable": "npm", "runtimeArgs": ["run", "dev", "--prefix", "D:/Neo/web", "--workspaces=false"], "port": 3000 }
+  ]
+}

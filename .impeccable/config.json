@@ -1,0 +1,35 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/assigned.html"
+        ],
+        "createdAt": "2026-11-05T13:32:11.622Z",
+        "reason": "agent triage: throwaway decision sketch, gitignored, never ships, round closed"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/challenger-dense.html"
+        ],
+        "createdAt": "2026-11-05T13:32:11.713Z",
+        "reason": "agent triage: throwaway decision sketch, gitignored, never ships, round closed"
+      },
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "files": [
+          ".impeccable/mocks/decision/canon.html"
+        ],
+        "createdAt": "2026-11-05T13:32:11.794Z",
+        "reason": "agent triage: canon card deliberately shows the category standard; throwaway sketch, never ships"
+      }
+    ]
+  }
+}
